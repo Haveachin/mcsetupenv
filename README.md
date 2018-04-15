@@ -4,7 +4,7 @@ This program is setting up the standard minecraft modding environment.
 ## Supported IDEs
 * Eclipse
 
-##Necessary flags
+## Necessary flags
 `forgeurl` - The URL to the Zip-fiel of the forge version (mdk)
 ```
 Type:    string
@@ -13,8 +13,8 @@ Default: ""
 Example:
 mcsetupenv.exe -forgeurl=https://files.minecraftforge.net/maven/net/minecraftforge/forge/[...]-mdk.zip
 ```
----
-##Optional flags
+
+## Optional flags
 `filename` - The name of the forge file that is downlaoded
 ```
 Type:    string
@@ -32,7 +32,7 @@ Default: true
 Example:
 mcsetupenv.exe -delfile=true
 ```
-
+---
 ## Example Usage
 For Windows the best solution is to use a batch file:
 
