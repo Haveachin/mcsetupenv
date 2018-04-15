@@ -1,0 +1,13 @@
+# Ignore everything
+/*
+
+# Recursively allow files under subtree
+!/.git/
+!/src/
+
+# Allow these files
+!.gitignore
+!LICENSE
+!mcsetupenv.exe
+!README.md
+!setup.bat
