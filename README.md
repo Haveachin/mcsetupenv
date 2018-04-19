@@ -5,32 +5,41 @@ This program is setting up the standard minecraft modding environment.
 * Eclipse
 
 ## Necessary flags
-`forgeurl` - The URL to the Zip-fiel of the forge version (mdk)
+`ff-url` - The URL to the Zip-file of the forge version (mdk)
 ```
 Type:    string
 Default: ""   
 
 Example:
-mcsetupenv.exe -forgeurl=https://files.minecraftforge.net/maven/net/minecraftforge/forge/[...]-mdk.zip
+mcsetupenv.exe -ff-url=https://files.minecraftforge.net/maven/net/minecraftforge/forge/[...]-mdk.zip
 ```
 
 ## Optional flags
-`filename` - The name of the forge file that is downlaoded
+`fp-dl` - The path + name of the forge file that is downlaoded
 ```
 Type:    string
 Default: "temp.zip"   
 
 Example:
-mcsetupenv.exe -filename=myfile.zip
+mcsetupenv.exe -fp-dl=myfile.zip
 ```
 
-`delfile` - If the forge file should be deleted or not
+`fp-extract` - The path where the forge file should extract
 ```
-Type:    bool
-Default: true   
+Type:    string
+Default: "."   
 
 Example:
-mcsetupenv.exe -delfile=true
+mcsetupenv.exe -fp-extract=mdk
+```
+
+`ff-del` - If the forge file should be deleted or not
+```
+Type:    bool
+Default: true
+
+Example:
+mcsetupenv.exe -ff-del=false
 ```
 ---
 ## Example Usage
@@ -42,7 +51,7 @@ For Windows the best solution is to use a batch file:
 title Minecraft Setup Environment
 cls
 
-mcsetupenv.exe -forgeurl=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.3.2666/forge-1.12.2-14.23.3.2666-mdk.zip -filename=myfile.zip -delfile=false
+mcsetupenv.exe -forgeurl=https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.3.2666/forge-1.12.2-14.23.3.2666-mdk.zip -filename=myfile.zip -fp-extract=mdk -delfile=false
 
 PAUSE
 ```
